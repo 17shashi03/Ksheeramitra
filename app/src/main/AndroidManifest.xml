@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ===================================================== -->
+    <!-- INTERNET -->
+    <!-- ===================================================== -->
+
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+
+    <!-- ===================================================== -->
+    <!-- CAMERA -->
+    <!-- ===================================================== -->
+
+    <uses-permission
+        android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <!-- ===================================================== -->
+    <!-- SMS (automatic sending from the phone's SIM) -->
+    <!-- ===================================================== -->
+
+    <uses-permission
+        android:name="android.permission.SEND_SMS" />
+
+    <!-- Lets the app install on devices/tablets without a SIM -->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <!-- ===================================================== -->
+    <!-- Lets the app find a camera app on Android 11+ -->
+    <!-- ===================================================== -->
+
+    <queries>
+
+        <intent>
+
+            <action
+                android:name="android.media.action.IMAGE_CAPTURE" />
+
+        </intent>
+
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Ksheeramitra"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Ksheeramitra"
+        tools:targetApi="35">
+
+        <!-- ================================================= -->
+        <!-- SPLASH (launcher) -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Ksheeramitra">
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.MAIN" />
+
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+
+        </activity>
+
+        <!-- ================================================= -->
+        <!-- AUTH -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="false" />
+
+        <!-- ================================================= -->
+        <!-- DASHBOARD / PROFILE -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+
+        <!-- configChanges: keeps the screen (and the photo being taken)
+             from restarting when the phone is rotated while the camera is open -->
+        <activity
+            android:name=".ProfileActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="false" />
+
+        <!-- ================================================= -->
+        <!-- FARMER -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".FarmerActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="false" />
+
+        <activity
+            android:name=".FarmerListActivity"
+            android:exported="false" />
+
+        <!-- ================================================= -->
+        <!-- MILK COLLECTION -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".MilkCollectionActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MilkCollectionListActivity"
+            android:exported="false" />
+
+        <!-- ================================================= -->
+        <!-- PAYMENT -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".PaymentListActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".PaymentManagementActivity"
+            android:exported="false" />
+
+        <!-- ================================================= -->
+        <!-- QUALITY TESTING -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".QualityTestingActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".QualityTestListActivity"
+            android:exported="false" />
+
+        <!-- ================================================= -->
+        <!-- REPORTS -->
+        <!-- ================================================= -->
+
+        <activity
+            android:name=".ReportsActivity"
+            android:exported="false" />
+
+        <!-- ================================================= -->
+        <!-- FileProvider (camera photos) - needs res/xml/file_paths.xml -->
+        <!-- ================================================= -->
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+
+        </provider>
+
+        <!-- ================================================= -->
+        <!-- Remembers the chosen app language on Android 12 and below -->
+        <!-- ================================================= -->
+
+        <service
+            android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
+            android:enabled="false"
+            android:exported="false">
+
+            <meta-data
+                android:name="autoStoreLocales"
+                android:value="true" />
+
+        </service>
+
+    </application>
+
+</manifest>

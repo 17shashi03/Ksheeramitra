@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "402608349399",
+    "project_id": "ksheeramitra",
+    "storage_bucket": "ksheeramitra.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402608349399:android:0294d8a6dd6b33466c5092",
+        "android_client_info": {
+          "package_name": "com.example.ksheeramitra"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402608349399-fr4bduvjrbatrnlph7urknairbfk2pm6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChJzArbUOlnEsHbkz4mTv5irQ9PCAlAus"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402608349399-fr4bduvjrbatrnlph7urknairbfk2pm6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

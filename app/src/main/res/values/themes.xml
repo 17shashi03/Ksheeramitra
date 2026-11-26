@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Base.Theme.Ksheeramitra" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Brand green -->
+        <item name="colorPrimary">#2E7D32</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorPrimaryContainer">#C8E6C9</item>
+        <item name="colorOnPrimaryContainer">#00210B</item>
+
+        <!-- Surfaces and text -->
+        <item name="colorSurface">#F4F8F6</item>
+        <item name="colorOnSurface">#1B2A21</item>
+        <item name="colorOnSurfaceVariant">#718078</item>
+        <item name="colorOutline">#98A49D</item>
+    </style>
+
+    <style name="Theme.Ksheeramitra" parent="Base.Theme.Ksheeramitra" />
+
+</resources>

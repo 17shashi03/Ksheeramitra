@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/ic_launcher_foreground.xml
+     Shows the WHOLE logo, shrunk a little so the launcher never crops it.
+     inset 18% -> logo is about 69dp inside the 108dp icon canvas.
+     Bigger logo: use 15%.   Smaller logo: use 22%. -->
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ksheeramitra_logo"
+    android:inset="18%" />
